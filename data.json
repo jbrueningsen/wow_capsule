@@ -1,0 +1,1186 @@
+{
+  "generatedAt": "2026-01-02T21:44:53.361Z",
+  "base": "https://fresh.warcraftlogs.com",
+  "reports": [
+    {
+      "code": "XdBJty6RqnCV2xwc",
+      "title": "Naxxramas"
+    },
+    {
+      "code": "xtNDpvjJ7k6wz1PX",
+      "title": "Naxx 12/16"
+    }
+  ],
+  "fights": [
+    {
+      "reportCode": "XdBJty6RqnCV2xwc",
+      "boss": "Sapphiron",
+      "kill": false,
+      "startTime": 2337311,
+      "endTime": 2675768,
+      "topDamage": [
+        {
+          "name": "Cadeyrn",
+          "total": 159537
+        },
+        {
+          "name": "Mavericc",
+          "total": 139706
+        },
+        {
+          "name": "Freehugss",
+          "total": 134163
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 263572
+        },
+        {
+          "name": "Terlan",
+          "total": 201770
+        },
+        {
+          "name": "Ohnan",
+          "total": 187347
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "XdBJty6RqnCV2xwc",
+      "boss": "Sapphiron",
+      "kill": false,
+      "startTime": 3005239,
+      "endTime": 3162310,
+      "topDamage": [
+        {
+          "name": "Strabismus",
+          "total": 65939
+        },
+        {
+          "name": "Cadeyrn",
+          "total": 60553
+        },
+        {
+          "name": "Mavericc",
+          "total": 59392
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Terlan",
+          "total": 101616
+        },
+        {
+          "name": "Filmore",
+          "total": 88324
+        },
+        {
+          "name": "Ohnan",
+          "total": 83073
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "XdBJty6RqnCV2xwc",
+      "boss": "Sapphiron",
+      "kill": true,
+      "startTime": 3600567,
+      "endTime": 3840188,
+      "topDamage": [
+        {
+          "name": "Calús",
+          "total": 186879
+        },
+        {
+          "name": "Mavericc",
+          "total": 168011
+        },
+        {
+          "name": "Nohemi",
+          "total": 162973
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 209369
+        },
+        {
+          "name": "Filmore",
+          "total": 173551
+        },
+        {
+          "name": "Acidtrip",
+          "total": 156157
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "XdBJty6RqnCV2xwc",
+      "boss": "Kel'Thuzad",
+      "kill": false,
+      "startTime": 5016060,
+      "endTime": 5101137,
+      "topDamage": [
+        {
+          "name": "Legolasjr",
+          "total": 23775
+        },
+        {
+          "name": "Randompro",
+          "total": 21073
+        },
+        {
+          "name": "Evokkin",
+          "total": 20164
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Ozymandias",
+          "total": 45868
+        },
+        {
+          "name": "Loother",
+          "total": 33551
+        },
+        {
+          "name": "Ohnan",
+          "total": 32660
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "XdBJty6RqnCV2xwc",
+      "boss": "Kel'Thuzad",
+      "kill": false,
+      "startTime": 5632690,
+      "endTime": 5735198,
+      "topDamage": [
+        {
+          "name": "Pinocchio",
+          "total": 47339
+        },
+        {
+          "name": "Legolasjr",
+          "total": 45249
+        },
+        {
+          "name": "Strabismus",
+          "total": 40305
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Filmore",
+          "total": 48277
+        },
+        {
+          "name": "Detholusin",
+          "total": 44941
+        },
+        {
+          "name": "Ohnan",
+          "total": 38674
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "XdBJty6RqnCV2xwc",
+      "boss": "Kel'Thuzad",
+      "kill": false,
+      "startTime": 6382652,
+      "endTime": 6681816,
+      "topDamage": [
+        {
+          "name": "Mavericc",
+          "total": 192875
+        },
+        {
+          "name": "Krannie",
+          "total": 165146
+        },
+        {
+          "name": "Pinocchio",
+          "total": 154195
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Oschean",
+          "total": 128578
+        },
+        {
+          "name": "Ohnan",
+          "total": 107649
+        },
+        {
+          "name": "Loother",
+          "total": 101053
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "XdBJty6RqnCV2xwc",
+      "boss": "Kel'Thuzad",
+      "kill": false,
+      "startTime": 7287079,
+      "endTime": 7507985,
+      "topDamage": [
+        {
+          "name": "Mavericc",
+          "total": 137367
+        },
+        {
+          "name": "Iriah",
+          "total": 116790
+        },
+        {
+          "name": "Nohemi",
+          "total": 107725
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Oschean",
+          "total": 63037
+        },
+        {
+          "name": "Filmore",
+          "total": 62039
+        },
+        {
+          "name": "Detholusin",
+          "total": 59757
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "XdBJty6RqnCV2xwc",
+      "boss": "Kel'Thuzad",
+      "kill": false,
+      "startTime": 8091639,
+      "endTime": 8404087,
+      "topDamage": [
+        {
+          "name": "Mavericc",
+          "total": 232685
+        },
+        {
+          "name": "Cadeyrn",
+          "total": 192273
+        },
+        {
+          "name": "Madyeet",
+          "total": 184416
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Loother",
+          "total": 137901
+        },
+        {
+          "name": "Ohnan",
+          "total": 137876
+        },
+        {
+          "name": "Ozymandias",
+          "total": 119326
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "XdBJty6RqnCV2xwc",
+      "boss": "Kel'Thuzad",
+      "kill": true,
+      "startTime": 10086696,
+      "endTime": 10275765,
+      "topDamage": [
+        {
+          "name": "Pinocchio",
+          "total": 189976
+        },
+        {
+          "name": "Madyeet",
+          "total": 169785
+        },
+        {
+          "name": "Cadeyrn",
+          "total": 152648
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Oschean",
+          "total": 112894
+        },
+        {
+          "name": "Detholusin",
+          "total": 107726
+        },
+        {
+          "name": "Filmore",
+          "total": 93172
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Instructor Razuvious",
+      "kill": true,
+      "startTime": 1358666,
+      "endTime": 1498755,
+      "topDamage": [
+        {
+          "name": "Mavericc",
+          "total": 101688
+        },
+        {
+          "name": "Krannie",
+          "total": 92293
+        },
+        {
+          "name": "Littlesnave",
+          "total": 90041
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 69015
+        },
+        {
+          "name": "Loother",
+          "total": 57843
+        },
+        {
+          "name": "Oschean",
+          "total": 50007
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Patchwerk",
+      "kill": true,
+      "startTime": 2795168,
+      "endTime": 2955447,
+      "topDamage": [
+        {
+          "name": "Calús",
+          "total": 223674
+        },
+        {
+          "name": "Hammerander",
+          "total": 215342
+        },
+        {
+          "name": "Mavericc",
+          "total": 208925
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Filmore",
+          "total": 102011
+        },
+        {
+          "name": "Acidtrip",
+          "total": 82863
+        },
+        {
+          "name": "Detholusin",
+          "total": 82587
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Grobbulus",
+      "kill": true,
+      "startTime": 3294893,
+      "endTime": 3380165,
+      "topDamage": [
+        {
+          "name": "Mavericc",
+          "total": 126055
+        },
+        {
+          "name": "Hammerander",
+          "total": 117604
+        },
+        {
+          "name": "Calús",
+          "total": 110971
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 54271
+        },
+        {
+          "name": "Acidtrip",
+          "total": 37556
+        },
+        {
+          "name": "Loother",
+          "total": 32676
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Gluth",
+      "kill": true,
+      "startTime": 3539311,
+      "endTime": 3623402,
+      "topDamage": [
+        {
+          "name": "Hammerander",
+          "total": 98228
+        },
+        {
+          "name": "Calús",
+          "total": 91337
+        },
+        {
+          "name": "Nohemi",
+          "total": 89944
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 51449
+        },
+        {
+          "name": "Ohnan",
+          "total": 18009
+        },
+        {
+          "name": "Loother",
+          "total": 16176
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Thaddius",
+      "kill": true,
+      "startTime": 3789919,
+      "endTime": 4005652,
+      "topDamage": [
+        {
+          "name": "Calús",
+          "total": 386349
+        },
+        {
+          "name": "Mavericc",
+          "total": 381463
+        },
+        {
+          "name": "Hammerander",
+          "total": 373584
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 129632
+        },
+        {
+          "name": "Oschean",
+          "total": 92713
+        },
+        {
+          "name": "Loother",
+          "total": 84532
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Noth the Plaguebringer",
+      "kill": true,
+      "startTime": 4534486,
+      "endTime": 4602790,
+      "topDamage": [
+        {
+          "name": "Mavericc",
+          "total": 103546
+        },
+        {
+          "name": "Littlesnave",
+          "total": 96813
+        },
+        {
+          "name": "Hammerander",
+          "total": 92080
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Acidtrip",
+          "total": 17579
+        },
+        {
+          "name": "Clemfiggins",
+          "total": 17352
+        },
+        {
+          "name": "Detholusin",
+          "total": 16189
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Heigan the Unclean",
+      "kill": true,
+      "startTime": 4810293,
+      "endTime": 4890989,
+      "topDamage": [
+        {
+          "name": "Hammerander",
+          "total": 122051
+        },
+        {
+          "name": "Littlesnave",
+          "total": 109010
+        },
+        {
+          "name": "Mavericc",
+          "total": 98932
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Oschean",
+          "total": 21831
+        },
+        {
+          "name": "Ohnan",
+          "total": 20694
+        },
+        {
+          "name": "Detholusin",
+          "total": 19726
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Loatheb",
+      "kill": true,
+      "startTime": 5738325,
+      "endTime": 5948352,
+      "topDamage": [
+        {
+          "name": "Hammerander",
+          "total": 277648
+        },
+        {
+          "name": "Calús",
+          "total": 269187
+        },
+        {
+          "name": "Mavericc",
+          "total": 252783
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 34190
+        },
+        {
+          "name": "Acidtrip",
+          "total": 22894
+        },
+        {
+          "name": "Bennylava",
+          "total": 22737
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Gothik the Harvester",
+      "kill": true,
+      "startTime": 6742062,
+      "endTime": 7044309,
+      "topDamage": [
+        {
+          "name": "Cadeyrn",
+          "total": 108739
+        },
+        {
+          "name": "Pinocchio",
+          "total": 83495
+        },
+        {
+          "name": "Littlesnave",
+          "total": 75520
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Acidtrip",
+          "total": 76349
+        },
+        {
+          "name": "Detholusin",
+          "total": 72041
+        },
+        {
+          "name": "Oschean",
+          "total": 68131
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "The Four Horsemen",
+      "kill": false,
+      "startTime": 8198920,
+      "endTime": 8355929,
+      "topDamage": [
+        {
+          "name": "Mavericc",
+          "total": 70176
+        },
+        {
+          "name": "Cadeyrn",
+          "total": 57418
+        },
+        {
+          "name": "Strabismus",
+          "total": 57058
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Acidtrip",
+          "total": 65758
+        },
+        {
+          "name": "Filmore",
+          "total": 64608
+        },
+        {
+          "name": "Rymia",
+          "total": 53507
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "The Four Horsemen",
+      "kill": false,
+      "startTime": 8761080,
+      "endTime": 9031313,
+      "topDamage": [
+        {
+          "name": "Cadeyrn",
+          "total": 95267
+        },
+        {
+          "name": "Mavericc",
+          "total": 88987
+        },
+        {
+          "name": "Strabismus",
+          "total": 88758
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 106630
+        },
+        {
+          "name": "Rymia",
+          "total": 97739
+        },
+        {
+          "name": "Filmore",
+          "total": 84459
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "The Four Horsemen",
+      "kill": true,
+      "startTime": 9491409,
+      "endTime": 9845727,
+      "topDamage": [
+        {
+          "name": "Mavericc",
+          "total": 118712
+        },
+        {
+          "name": "Baldosgate",
+          "total": 109699
+        },
+        {
+          "name": "Calús",
+          "total": 109446
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 121657
+        },
+        {
+          "name": "Filmore",
+          "total": 119606
+        },
+        {
+          "name": "Oschean",
+          "total": 116949
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Anub'Rekhan",
+      "kill": true,
+      "startTime": 10225581,
+      "endTime": 10342338,
+      "topDamage": [
+        {
+          "name": "Littlesnave",
+          "total": 123683
+        },
+        {
+          "name": "Hammerander",
+          "total": 113737
+        },
+        {
+          "name": "Krannie",
+          "total": 107083
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Detholusin",
+          "total": 38792
+        },
+        {
+          "name": "Oschean",
+          "total": 32720
+        },
+        {
+          "name": "Filmore",
+          "total": 31845
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Grand Widow Faerlina",
+      "kill": true,
+      "startTime": 11130444,
+      "endTime": 11209084,
+      "topDamage": [
+        {
+          "name": "Cadeyrn",
+          "total": 84515
+        },
+        {
+          "name": "Littlesnave",
+          "total": 80745
+        },
+        {
+          "name": "Madyeet",
+          "total": 74921
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Acidtrip",
+          "total": 33707
+        },
+        {
+          "name": "Detholusin",
+          "total": 29844
+        },
+        {
+          "name": "Oschean",
+          "total": 28191
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    },
+    {
+      "reportCode": "xtNDpvjJ7k6wz1PX",
+      "boss": "Maexxna",
+      "kill": true,
+      "startTime": 11877164,
+      "endTime": 11990473,
+      "topDamage": [
+        {
+          "name": "Littlesnave",
+          "total": 102563
+        },
+        {
+          "name": "Mavericc",
+          "total": 87831
+        },
+        {
+          "name": "Madyeet",
+          "total": 83877
+        }
+      ],
+      "topHealing": [
+        {
+          "name": "Acidtrip",
+          "total": 33172
+        },
+        {
+          "name": "Oschean",
+          "total": 31646
+        },
+        {
+          "name": "Filmore",
+          "total": 28852
+        }
+      ],
+      "meta": {
+        "damageDataType": "DamageDone",
+        "healingDataType": "Healing"
+      }
+    }
+  ],
+  "overall": {
+    "players": [
+      {
+        "name": "Mavericc",
+        "damage": 3062970,
+        "healing": 74774
+      },
+      {
+        "name": "Calús",
+        "damage": 2575330,
+        "healing": 76542
+      },
+      {
+        "name": "Cadeyrn",
+        "damage": 2556857,
+        "healing": 79996
+      },
+      {
+        "name": "Strabismus",
+        "damage": 2357221,
+        "healing": 69985
+      },
+      {
+        "name": "Pinocchio",
+        "damage": 2324798,
+        "healing": 90081
+      },
+      {
+        "name": "Hammerander",
+        "damage": 2298488,
+        "healing": 86644
+      },
+      {
+        "name": "Freehugss",
+        "damage": 2322755,
+        "healing": 42508
+      },
+      {
+        "name": "Baldosgate",
+        "damage": 2249403,
+        "healing": 105930
+      },
+      {
+        "name": "Krannie",
+        "damage": 2246990,
+        "healing": 79556
+      },
+      {
+        "name": "Madyeet",
+        "damage": 2216625,
+        "healing": 82484
+      },
+      {
+        "name": "Iriah",
+        "damage": 2237085,
+        "healing": 42252
+      },
+      {
+        "name": "Evokkin",
+        "damage": 2119112,
+        "healing": 102284
+      },
+      {
+        "name": "Nohemi",
+        "damage": 2092457,
+        "healing": 86168
+      },
+      {
+        "name": "Legolasjr",
+        "damage": 1998123,
+        "healing": 80606
+      },
+      {
+        "name": "Thorenjle",
+        "damage": 2005747,
+        "healing": 72031
+      },
+      {
+        "name": "Blackholeson",
+        "damage": 1929658,
+        "healing": 140234
+      },
+      {
+        "name": "Randompro",
+        "damage": 1971860,
+        "healing": 81513
+      },
+      {
+        "name": "Banhaps",
+        "damage": 1755486,
+        "healing": 113386
+      },
+      {
+        "name": "Detholusin",
+        "damage": 149,
+        "healing": 1834394
+      },
+      {
+        "name": "Jaranna",
+        "damage": 1756265,
+        "healing": 49642
+      },
+      {
+        "name": "Sintricate",
+        "damage": 1657300,
+        "healing": 113249
+      },
+      {
+        "name": "Littlesnave",
+        "damage": 1679022,
+        "healing": 49567
+      },
+      {
+        "name": "Kurji",
+        "damage": 1542332,
+        "healing": 68632
+      },
+      {
+        "name": "Oschean",
+        "damage": 6711,
+        "healing": 1459558
+      },
+      {
+        "name": "Greysn",
+        "damage": 1353676,
+        "healing": 94045
+      },
+      {
+        "name": "Glenys",
+        "damage": 801688,
+        "healing": 622300
+      },
+      {
+        "name": "Ohnan",
+        "damage": 11164,
+        "healing": 1398158
+      },
+      {
+        "name": "Filmore",
+        "damage": 26495,
+        "healing": 1380598
+      },
+      {
+        "name": "Bigsnave",
+        "damage": 1365757,
+        "healing": 35662
+      },
+      {
+        "name": "Loother",
+        "damage": 7990,
+        "healing": 1361788
+      },
+      {
+        "name": "Acidtrip",
+        "damage": 14986,
+        "healing": 1354301
+      },
+      {
+        "name": "Bearcattree",
+        "damage": 1150715,
+        "healing": 172527
+      },
+      {
+        "name": "Bennylava",
+        "damage": 1186059,
+        "healing": 134729
+      },
+      {
+        "name": "Môrebetter",
+        "damage": 1146193,
+        "healing": 58273
+      },
+      {
+        "name": "Rymia",
+        "damage": 62956,
+        "healing": 1053410
+      },
+      {
+        "name": "Clemfiggins",
+        "damage": 13556,
+        "healing": 1083186
+      },
+      {
+        "name": "Sticey",
+        "damage": 1012714,
+        "healing": 34100
+      },
+      {
+        "name": "Dennaa",
+        "damage": 0,
+        "healing": 1005735
+      },
+      {
+        "name": "Rocketsocket",
+        "damage": 774376,
+        "healing": 30235
+      },
+      {
+        "name": "Terlan",
+        "damage": 7885,
+        "healing": 719074
+      },
+      {
+        "name": "Ozymandias",
+        "damage": 2315,
+        "healing": 696599
+      },
+      {
+        "name": "Stice",
+        "damage": 603032,
+        "healing": 74852
+      },
+      {
+        "name": "Warthrill",
+        "damage": 606485,
+        "healing": 44951
+      },
+      {
+        "name": "Sylio",
+        "damage": 0,
+        "healing": 507550
+      },
+      {
+        "name": "Rustay",
+        "damage": 26410,
+        "healing": 368363
+      },
+      {
+        "name": "Gezebelle",
+        "damage": 2672,
+        "healing": 383909
+      }
+    ]
+  }
+}

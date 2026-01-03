@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loother — A Classic Journey</title>
+
+<style>
+:root{
+  --bg:#070a0e;
+  --panel:#0f1720;
+  --ink:#e6edf6;
+  --muted:#9bb0c5;
+  --gold:#ffd27d;
+  --line:#1f2b3a;
+  --accent:#7cc4ff;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(124,196,255,.12), transparent 60%),
+    radial-gradient(900px 650px at 85% 20%, rgba(255,210,125,.10), transparent 60%),
+    linear-gradient(180deg,#05070a,#070a0e 45%,#070a0e);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+/* ===== HERO (Uther/Paladin emphasis) ===== */
+header{
+  position:relative;
+  overflow:hidden;
+  padding:82px 20px 62px;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.20),rgba(0,0,0,.82)),
+    url('images/Loother_Crusader.jpg') center/cover no-repeat;
+}
+header::before{
+  content:"";
+  position:absolute;inset:-40px;
+  background:
+    radial-gradient(900px 480px at 18% 10%, rgba(255,210,125,.22), transparent 60%),
+    radial-gradient(900px 520px at 75% 30%, rgba(124,196,255,.16), transparent 65%);
+  pointer-events:none;
+  mix-blend-mode:screen;
+  opacity:.7;
+}
+header::after{
+  /* subtle vignette */
+  content:"";
+  position:absolute;inset:0;
+  background:radial-gradient(900px 650px at 50% 30%, transparent 30%, rgba(0,0,0,.55) 78%);
+  pointer-events:none;
+}
+.wrap{max-width:1120px;margin:0 auto;position:relative;z-index:1}
+
+.kicker{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  color:rgba(255,255,255,.90);
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  background:rgba(15,23,32,.62);
+  border:1px solid rgba(255,255,255,.12);
+  padding:9px 12px;
+  border-radius:999px;
+  backdrop-filter: blur(8px);
+}
+.kicker .sigil{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 22px rgba(255,210,125,.55);
+}
+h1{
+  font-size:52px;
+  margin:14px 0 10px;
+  letter-spacing:.2px;
+  line-height:1.02;
+  text-shadow:0 18px 60px rgba(0,0,0,.65);
+}
+.sub{
+  max-width:78ch;
+  color:rgba(234,241,248,.90);
+  line-height:1.65;
+  font-size:16px;
+  text-shadow:0 18px 50px rgba(0,0,0,.65);
+}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.badge{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+  padding:9px 12px;
+  font-size:13px;
+  background:rgba(15,23,32,.62);
+  color:rgba(234,241,248,.86);
+  backdrop-filter: blur(8px);
+}
+.badge strong{color:#fff}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(15,23,32,.62);
+  padding:10px 12px;
+  border-radius:14px;
+  color:rgba(234,241,248,.92);
+  font-size:13px;
+  backdrop-filter: blur(8px);
+}
+.btn:hover{text-decoration:none;background:rgba(15,23,32,.78)}
+.btn .spark{
+  width:9px;height:9px;border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 18px rgba(124,196,255,.55);
+}
+
+/* ===== PAGE + “Light → Shadow” section shifts ===== */
+main{padding:0}
+.band{
+  padding:52px 20px;
+  position:relative;
+}
+.band.light::before,
+.band.shadow::before{
+  content:"";
+  position:absolute;inset:0;
+  pointer-events:none;
+  opacity:.9;
+}
+.band.light::before{
+  background:
+    radial-gradient(1100px 520px at 15% 15%, rgba(255,210,125,.12), transparent 55%),
+    radial-gradient(900px 520px at 80% 35%, rgba(124,196,255,.10), transparent 60%),
+    linear-gradient(180deg, rgba(255,210,125,.06), rgba(0,0,0,0));
+}
+.band.shadow::before{
+  background:
+    radial-gradient(900px 520px at 25% 20%, rgba(124,196,255,.08), transparent 62%),
+    radial-gradient(900px 520px at 80% 40%, rgba(140,80,255,.07), transparent 65%),
+    linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.25));
+}
+.band .wrap{position:relative;z-index:1}
+
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.card{
+  grid-column:span 12;
+  background:rgba(15,23,32,.86);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+  overflow:hidden;
+  position:relative;
+}
+.card::before{
+  content:"";
+  position:absolute;inset:0;
+  background:radial-gradient(900px 420px at 18% 0%, rgba(124,196,255,.08), transparent 55%);
+  pointer-events:none;
+}
+.card>*{position:relative;z-index:1}
+@media(min-width:900px){.half{grid-column:span 6}}
+h2{margin:0 0 10px;font-size:22px}
+.story{line-height:1.75;color:var(--muted);margin:0}
+hr{border:none;height:1px;background:rgba(255,255,255,.10);margin:16px 0}
+
+.chapter{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:16px;
+  align-items:center;
+}
+@media(max-width:860px){.chapter{grid-template-columns:1fr}}
+img.feature{
+  width:100%;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.10);
+  display:block;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+  margin-top:14px;
+}
+.gallery img{
+  width:100%;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  display:block;
+}
+
+.rollcall{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;
+  margin-top:14px;
+}
+.namechip{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  padding:9px 10px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:12px;
+  background:rgba(0,0,0,.22);
+  font-size:13px;
+}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px rgba(255,210,125,.45)}
+small{color:var(--muted)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.epilogue{min-height:auto; padding:28px 22px; background: rgba(7,10,12,.55); border:1px solid rgba(255,255,255,.10);}.epilogue::before{
+  background:radial-gradient(1000px 520px at 25% 20%, rgba(124,196,255,.14), transparent 60%);
+  opacity:.8;
+}
+
+/* ===== Fade-in on load ===== */
+.fade{
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity 900ms ease, transform 900ms ease;
+}
+body.loaded .fade{
+  opacity:1;
+  transform:translateY(0);
+}
+.delay1{transition-delay:120ms}
+.delay2{transition-delay:260ms}
+.delay3{transition-delay:420ms}
+.delay4{transition-delay:560ms}
+
+footer{
+  border-top:1px solid rgba(255,255,255,.10);
+  padding:20px;
+  color:var(--muted);
+  font-size:12px;
+  background:rgba(0,0,0,.25);
+}
+
+/* ===== Boss log pills ===== */
+.logrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px}
+.logpill{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.22);
+  padding:9px 12px;border-radius:999px;
+  color:rgba(234,241,248,.92);font-size:13px;
+}
+.logpill:hover{text-decoration:none;background:rgba(0,0,0,.35)}
+.logpill .spark{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 16px rgba(124,196,255,.55);
+}
+.logmeta{color:var(--muted);font-size:13px;line-height:1.45}
+
+
+/* ===== Hero sizing tweak ===== */
+header{padding:64px 20px 44px !important;}
+@media(min-width:900px){header{padding:70px 20px 52px !important;}}
+.hero-media img{object-position:50% 35% !important; transform:scale(1.0) !important;}
+
+
+/* ===== Bigger Moments gallery ===== */
+.gallery{grid-template-columns:repeat(auto-fit,minmax(320px,1fr)) !important;}
+.gallery img{border-radius:16px !important;}
+
+
+.gallery img{aspect-ratio: 16 / 9; object-fit: cover;}
+
+
+/* ===== Step 1: TBC hero image (show full art) ===== */
+.card.epilogue{min-height:auto; padding:28px 22px; background: rgba(7,10,12,.55); border:1px solid rgba(255,255,255,.10);}/* === Dark Portal Epilogue Override === */
+.epilogue{min-height:auto; padding:28px 22px; background: rgba(7,10,12,.55); border:1px solid rgba(255,255,255,.10);}.epilogue .story{
+  font-size: 1.15rem;
+  letter-spacing: .02em;
+}
+
+
+/* ===== Epilogue tag (Dark Portal) ===== */
+.epilogue-tag{
+  width:100%;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 18px 18px 22px;
+  border-radius: 18px;
+  background: rgba(7,10,12,.45);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(6px);
+}
+.epilogue-kicker{
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(220,235,255,.72);
+  margin-bottom: 6px;
+}
+.epilogue-title{
+  font-size: clamp(22px, 3.2vw, 34px);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.epilogue-sub{
+  color: rgba(235,242,248,.86);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+
+/* ===== Epilogue art (image below text) ===== */
+.epilogue-art{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:18px auto 0;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+}
+
+
+/* ===== Moments gallery: force 3x2 grid ===== */
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap:12px;
+  margin-top:14px;
+}
+@media(max-width:900px){
+  .gallery{grid-template-columns: repeat(2, 1fr) !important;}
+}
+@media(max-width:560px){
+  .gallery{grid-template-columns: 1fr !important;}
+}
+
+
+/* ===== Roll Call intro sentence ===== */
+.card h2 + .story{ text-align:left; }
+
+
+/* Keep narrative paragraphs left-aligned for readability */
+.card .story{ text-align:left; }
+
+
+/* ===== Standalone Dark Portal Epilogue ===== */
+.epilogue-standalone{
+  margin: 60px auto 20px;
+  max-width: 1100px;
+}
+
+
+/* ===== Epilogue closing text ===== */
+
+.epilogue-text .story{
+  text-align: left;
+}
+
+
+/* ===== Moments hover captions ===== */
+.gallery .tile{
+  position:relative;
+  margin:0;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(0,0,0,.18);
+}
+.gallery .tile img{
+  width:100%;
+  display:block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  transform: scale(1.00);
+  transition: transform 220ms ease;
+}
+.gallery .tile figcaption{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  padding:10px 12px;
+  font-size:12px;
+  color: rgba(235,242,248,.92);
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.72));
+  opacity:0;
+  transform: translateY(6px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events:none;
+}
+.gallery .tile:hover img{ transform: scale(1.03); }
+.gallery .tile:hover figcaption{ opacity:1; transform: translateY(0); }
+@media (max-width: 700px){
+  .gallery .tile figcaption{ opacity:1; transform:none; }
+}
+
+
+/* ===== Roll Call markers ===== */
+.marks{ margin-left:8px; display:inline-flex; gap:6px; vertical-align:middle; }
+.mark{ font-size:14px; line-height:1; filter: drop-shadow(0 0 10px rgba(255,255,255,.12)); }
+.mark.gm{ filter: drop-shadow(0 0 12px rgba(255,210,125,.30)); }
+.mark.officer{ filter: drop-shadow(0 0 12px rgba(124,196,255,.25)); }
+.mark.tf{ filter: drop-shadow(0 0 14px rgba(255,210,125,.22)); }
+
+.roll-legend{
+  display:flex; flex-wrap:wrap; gap:10px;
+  margin-top:10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.roll-legend span{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 10px;
+  border-radius: 999px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.18);
+}
+
+
+/* ===== Moments lightbox ===== */
+.lightbox-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.86);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.lightbox-overlay.active{ display:flex; }
+.lightbox-img{
+  max-width:92vw;
+  max-height:92vh;
+  border-radius:18px;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+.lightbox-close{
+  position:absolute;
+  top:18px; right:22px;
+  font-size:32px;
+  color:#fff;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+
+/* ===== Global image lightbox ===== */
+.lightbox-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.86);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.lightbox-overlay.active{ display:flex; }
+.lightbox-img{
+  max-width:92vw;
+  max-height:92vh;
+  border-radius:18px;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+.lightbox-close{
+  position:absolute;
+  top:18px; right:22px;
+  font-size:32px;
+  color:#fff;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+
+/* ===== Dark Portal Anticipation ===== */
+.anticipation{
+  margin: 36px auto 0;
+  max-width: 1100px;
+  text-align: center;
+}
+.anticipation-title{
+  font-size: 1.1rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.anticipation-gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 18px;
+}
+.anticipation-gallery img{
+  width:100%;
+  border-radius: 18px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+</style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker fade delay1"><span class="sigil"></span>Loother • Holy Paladin • Dreamscythe Classic</div>
+    <h1 class="fade delay2">Loother</h1>
+    <div class="sub fade delay3">
+      A paladin’s Classic journey — guided by the Light through fire, corruption, madness, and the long winter.
+      Measured not just in parses, but in people and perseverance.
+    </div>
+
+    <div class="badges fade delay4">
+      <div class="badge">Realm: <strong>Dreamscythe</strong></div>
+      <div class="badge">Guild: <strong>Return of the Alliance</strong></div>
+      <div class="badge">Role: <strong>Holy Paladin</strong></div>
+      </div>
+
+    <div class="btnrow fade delay4">
+      <a class="btn" href="https://fresh.warcraftlogs.com/character/us/dreamscythe/loother" target="_blank" rel="noreferrer">
+        <span class="spark"></span>Loother — Healing Parses
+      </a>
+      <a class="btn" href="https://fresh.warcraftlogs.com/guild/us/dreamscythe/return%20of%20the%20alliance" target="_blank" rel="noreferrer">
+        <span class="spark"></span>Guild Reports
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- LIGHT band -->
+  <section class="band light">
+    <div class="wrap">
+      <div class="grid">
+
+        <div class="card">
+          <h2>a Paladin's oath</h2>
+          <div class="chapter">
+            <div>
+              <p class="story">
+                “In all things, paladins must reflect the Light, which supplements our strength. To strive to be divine for one of our kind does not mean we strive for godhood--we strive to be good in all actions. Although called upon to smite evil in these harsh times, you must always remember that it's aiding others that will truly set you apart from the other citizens. Compassion, patience, bravery--these things mean as much to a paladin as strength in battle.” — [Tome of Divinity]
+              </p>
+              <hr>
+              <p class="story">
+                This page is a “thank you” — a memorial of raid nights and the people who made them legendary.
+              </p>
+</div>
+            <img class="feature" src="images/Loother_Uther.jpg" alt="Loother at Uther’s Tomb" data-fallback="images/Loother_Crusader.jpg" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+          </div>
+        </div>
+
+        <div class="card half">
+          <h2>Trials by fire</h2>
+          <img class="feature" src="images/Ragnaros.jpg" alt="Ragnaros" data-fallback="images/Loother_Crusader.jpg" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+          <p class="story" style="margin-top:12px">Molten Core forged patience. Healing was rhythm, not panic — a steady hand in the heat.
+</p>
+<div class="logrow">
+  <a class="logpill" href="https://fresh.warcraftlogs.com/reports/qRBdAhZvHQ78MWL6?fight=54&type=healing" target="_blank" rel="noreferrer"><span class="spark"></span>Ragnaros log</a>
+</div>
+
+        </div>
+
+        <div class="card half">
+          <h2>Onyxia’s lair</h2>
+          <img class="feature" src="images/Onyxia.jpg" alt="Onyxia" data-fallback="images/Loother_Crusader.jpg" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+          <p class="story" style="margin-top:12px">The first dragon lesson: keep your head, watch the room, and never underestimate a deep breath.
+</p>
+<div class="logrow">
+  <a class="logpill" href="https://fresh.warcraftlogs.com/reports/LgC634M8zwfGpZht?fight=3&type=healing" target="_blank" rel="noreferrer"><span class="spark"></span>Onyxia log</a>
+</div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SHADOW band -->
+  <section class="band shadow">
+    <div class="wrap">
+      <div class="grid">
+
+        <div class="card half">
+          <h2>Command & corruption</h2>
+          <img class="feature" src="images/Nefarian.jfif" alt="Nefarian" data-fallback="images/Loother_Crusader.jpg" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+          <p class="story" style="margin-top:12px">Blackwing Lair demanded precision — every cooldown planned, every mistake punished.
+</p>
+<div class="logrow">
+  <a class="logpill" href="https://fresh.warcraftlogs.com/reports/jYgG2hRPzC34K9Q6?fight=34&type=healing" target="_blank" rel="noreferrer"><span class="spark"></span>Nefarian log</a>
+</div>
+
+        </div>
+
+        <div class="card half">
+          <h2>Madness below</h2>
+          <img class="feature" src="images/Cthun.jpg" alt="C’Thun" data-fallback="images/Loother_Crusader.jpg" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+          <p class="story" style="margin-top:12px">Ahn’Qiraj tested resolve. Healing through chaos is where paladins become unshakable.
+</p>
+<div class="logrow">
+  <a class="logpill" href="https://fresh.warcraftlogs.com/reports/Pd9cy8RABK1j2p4m?fight=58&type=healing" target="_blank" rel="noreferrer"><span class="spark"></span>C’Thun log</a>
+</div>
+
+        </div>
+
+        <div class="card">
+          <h2>The long winter</h2>
+          <div class="chapter">
+            <div>
+              <p class="story">Naxxramas closed the book on Classic — Sapphiron, Kel’Thuzad, and the final stand.
+                It wasn’t just difficulty. It was the feeling that the era was ending, and you wanted everyone there for the last page.
+</p>
+<div class="logrow">
+  <a class="logpill" href="https://fresh.warcraftlogs.com/reports/HncbPgaCJ1M4Fq6T?fight=17&type=healing" target="_blank" rel="noreferrer"><span class="spark"></span>Sapphiron log</a>
+  <a class="logpill" href="https://fresh.warcraftlogs.com/reports/CWajKhGMY3PrxncX?fight=3&type=healing" target="_blank" rel="noreferrer"><span class="spark"></span>Kel’Thuzad log</a>
+</div>
+
+              <hr>
+              <p class="story">
+                ROTA × Ship Dits — different tags, same goal: one more pull, together.
+            </div>
+            <img class="feature" src="images/Sapphiron.jfif" alt="First Kel’Thuzad kill" data-fallback="images/Loother_Crusader.jpg" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHT band -->
+  <section class="band light">
+    <div class="wrap">
+      <div class="grid">
+
+        <div class="card">
+          <h2>Moments</h2>
+          <p class="story">Screenshots that still feel loud when you look at them.</p>
+          <div class="gallery">
+            <figure class="tile"><img src="images/First_KT_Kill.jpg" alt="First_KT_Kill"><figcaption>First_KT_Kill</figcaption></figure>
+            <figure class="tile"><img src="images/First_Sapph_Kill.png" alt="First_Sapph_Kill"><figcaption>First_Sapph_Kill</figcaption></figure>
+            <figure class="tile"><img src="images/Thunderfury_Sin.jpg" alt="Thunderfury_Sin"><figcaption>Thunderfury_Sin</figcaption></figure>
+            <figure class="tile"><img src="images/ROTAmeeting.jpg" alt="ROTAmeeting"><figcaption>ROTAmeeting</figcaption></figure>
+            <figure class="tile"><img src="images/Coolohgrande%20Thunderfury.png" alt="Coolohgrande Thunderfury"><figcaption>Coolohgrande Thunderfury</figcaption></figure>
+            <figure class="tile"><img src="images/Loother_Uther.jpg" alt="Loother_Uther"><figcaption>Loother_Uther</figcaption></figure>
+          </div>
+        </div>
+
+
+<div class="card">
+  <h2>Roll Call — thank you</h2>
+  <p class="story">These names are not footnotes. Every pull, every wipe, every kill was shared.</p>
+
+  <h3 style="margin-top:14px">Return of the Alliance</h3>
+<div class="rollcall">
+    <div class="namechip"><span class="dot"></span><div><strong>Anarchyarc</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Berrybreeze</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Bigdaddykral</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Bloodkink</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Bootycheeker</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Bowshots</strong><span class="marks"><span class="mark officer" title="Guild Officer">★</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Breadedpoop</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Bubbabeef</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Chadomir</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Coolohgrande</strong><span class="marks"><span class="mark tf" title="Thunderfury, Blessed Blade of the Windseeker">⚡</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Cpthealjoy</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Crapp</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Cupnoodlex</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Damadeluna</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Dannô</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Darkson</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Deathboltqt</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Deenthedruid</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Drvegapunk</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Dôg</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Eaterofdung</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Eledara</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Enchantius</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Ethyll</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Falla</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Fronke</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Gethero</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Grakzard</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Gyanki</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Healimchealz</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Hidenagenda</strong><span class="marks"><span class="mark officer" title="Guild Officer">★</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Horrowshow</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Hyggs</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Jzxx</strong><span class="marks"><span class="mark officer" title="Guild Officer">★</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Kaiokenxten</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Kajiggers</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Killakoala</strong><span class="marks"><span class="mark officer" title="Guild Officer">★</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Kimmypeas</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Loother</strong><span class="marks"><span class="mark officer" title="Guild Officer">★</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Lyftyohan</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Maleroes</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Mararc</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Mehrawkifx</strong><span class="marks"><span class="mark officer" title="Guild Officer">★</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Mikehauncho</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Mikerainsice</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Mikespally</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Nohemi</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Owsley</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Pig</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Pistacchio</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Porksy</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Provider</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Raleckaxed</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Ramadenoche</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Revyn</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Rhodanis</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Seglord</strong><span class="marks"><span class="mark officer" title="Guild Officer">★</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Sgtkilljoy</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Shadowtamer</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Shakkala</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Shiffti</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Shmize</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Sintricate</strong><span class="marks"><span class="mark gm" title="Guild Master">👑</span><span class="mark officer" title="Guild Officer">★</span><span class="mark tf" title="Thunderfury, Blessed Blade of the Windseeker">⚡</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Sintricit</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Skolviks</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Sliprÿwnnwet</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Sourbatch</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Spankk</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Stabberella</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Starfiend</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Sylio</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Syntricate</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Tankius</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Telladyr</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Therinzar</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Trixistix</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Ttzccz</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Ttzctz</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Tyranell</strong><span class="marks"><span class="mark gm" title="Guild Master">👑</span><span class="mark officer" title="Guild Officer">★</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Uwuadin</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Vinnycannoli</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Wisers</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Worgen</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Xaylor</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Zogarzite</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Zureta</strong><span class="marks"><span class="mark officer" title="Guild Officer">★</span></span></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Zéldä</strong></div></div>
+  </div>
+
+  <h3 style="margin-top:18px">Ship Dits (Naxx Allies)</h3>
+  <div class="rollcall">
+    <div class="namechip"><span class="dot"></span><div><strong>Acidtrip</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Baldosgate</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Banhaps</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Bearcattree</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Bennylava</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Blackbärt</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Blackhiem</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Blackholeson</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Cadeyrn</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Calús</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Clemfiggins</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Deartay</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Dennaa</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Detholusin</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Evokkin</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Filmore</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Freehugss</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Gezebelle</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Gillga</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Glenys</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Greysn</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Haleric</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Hammerander</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Holynovah</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Jaranna</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Krannie</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Kurji</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Legolasjr</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Littlénicky</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Madyeet</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Mavericc</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Milekitic</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Môrebetter</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Ohnan</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Oschean</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Ozymandias</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Pinocchio</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Randompro</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Reveredbeard</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Rustay</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Rymia</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Shuppa</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Sighlas</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Stice</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Sticey</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Strabismus</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Terlan</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Thorenjle</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Warthrill</strong></div></div>
+<div class="namechip"><span class="dot"></span><div><strong>Xpred</strong></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EPILOGUE -->
+  <section class="band shadow">
+    <div class="wrap">
+      <div class="grid">
+
+<div class="card epilogue">
+  <div class="epilogue-tag">
+    <div class="epilogue-kicker">Epilogue</div>
+    <div class="epilogue-title">The Dark Portal Opens</div>
+    <div class="epilogue-sub">Classic ends — your story doesn’t. The next chapter waits beyond the green fire.</div>
+  </div>
+
+  <img class="epilogue-art" src="images/Dark_Portal.jpg" alt="The Dark Portal">
+
+<div class="anticipation">
+  <h3 class="anticipation-title">Beyond the Portal</h3>
+  <div class="anticipation-gallery">
+    <img src="images/Illidan.jpg" alt="Illidan Stormrage awaits">
+    <img src="images/Lady_Vashj_and_Kaelthas.jpg" alt="Kael'thas Sunstrider and Lady Vashj">
+  </div>
+</div>
+
+
+  <div class="epilogue-text">
+    <p class="story">
+      Classic ends. Outland opens. New raids call — and the Light asks for a different kind of courage.
+    </p>
+    <hr>
+    <p class="story">
+      If this page is a memory, let it be a simple one:
+      <strong>we showed up</strong>, we learned, and we finished the story together.
+    </p>
+
+    <p class="story" style="margin-top:10px; opacity:.92">
+      The Light calls us to the Outlands.
+    </p>
+
+</div>
+</div>
+</main>
+<script>
+  // Fade in hero text on load
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img class="lightbox-img" alt="Expanded moment">
+</div>
+
+
+<script>
+(function(){
+  const lb = document.getElementById('lightbox');
+  if(!lb) return;
+  const img = lb.querySelector('.lightbox-img');
+  const closeBtn = lb.querySelector('.lightbox-close');
+
+  function openLightbox(src, alt){
+    img.src = src;
+    img.alt = alt || '';
+    lb.classList.add('active');
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function closeLightbox(){
+    lb.classList.remove('active');
+    lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+
+  document.querySelectorAll('.gallery .tile img').forEach(el=>{
+    el.style.cursor='zoom-in';
+    el.addEventListener('click', ()=> openLightbox(el.src, el.alt));
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', e=>{ if(e.target===lb) closeLightbox(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLightbox(); });
+})();
+</script>
+
+
+<!-- Global Lightbox -->
+<div class="lightbox-overlay" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img class="lightbox-img" alt="Expanded image">
+</div>
+
+<script>
+(function(){
+  const lb = document.getElementById('lightbox');
+  if(!lb) return;
+  const img = lb.querySelector('.lightbox-img');
+  const closeBtn = lb.querySelector('.lightbox-close');
+
+  function openLightbox(src, alt){
+    img.src = src;
+    img.alt = alt || '';
+    lb.classList.add('active');
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function closeLightbox(){
+    lb.classList.remove('active');
+    lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+
+  document.querySelectorAll('img').forEach(el=>{
+    if(el.closest('.lightbox-overlay')) return;
+    if(el.width && el.width < 80) return; // skip icons
+    el.style.cursor='zoom-in';
+    el.addEventListener('click', ()=> openLightbox(el.src, el.alt));
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', e=>{ if(e.target===lb) closeLightbox(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLightbox(); });
+})();
+</script>
+
+</body>
+</html>
